@@ -288,7 +288,8 @@ module.exports = function(options) {
 
 
     app.use(serveStatic(file.path, {
-      index: (config.directoryListing.enable ? false : config.defaultFile)
+      index: (config.directoryListing.enable ? false : config.defaultFile),
+      extensions: [ 'html' ]
     }));
 
     if (config.livereload.enable) {
